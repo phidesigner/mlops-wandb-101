@@ -33,7 +33,8 @@ for C in [0.001, 0.05, 1.0]:  # new: the experiment, one run per setting
 
     accuracy = pipe.score(X_val, y_val)
     recall = recall_score(y_val, pipe.predict(X_val))
-    run.log({"val_accuracy": accuracy, "val_recall": recall})
+    run.log({"val_accuracy": accuracy, "val_recall": recall,
+             "rows_train": len(X_train)})
     run.summary["rows_train"] = len(X_train)
     print(f"C={C:g} | val_accuracy {accuracy:.3f} | val_recall {recall:.3f}")
     run.finish()  # new: close this run before the next one starts

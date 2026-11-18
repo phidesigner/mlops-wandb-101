@@ -31,7 +31,8 @@ pipe.fit(X_train, y_train)
 
 accuracy = pipe.score(X_val, y_val)
 recall = recall_score(y_val, pipe.predict(X_val))
-run.log({"val_accuracy": accuracy, "val_recall": recall})  # new: metrics, by name
+run.log({"val_accuracy": accuracy, "val_recall": recall,
+         "rows_train": len(X_train)})  # new: history values for charts
 run.summary["rows_train"] = len(X_train)  # new: a final fact about this run
 print(f"C={C:g} | val_accuracy {accuracy:.3f} | val_recall {recall:.3f}")
 run.finish()

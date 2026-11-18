@@ -32,7 +32,8 @@ pipe.fit(X_train, y_train)
 predicted = pipe.predict(X_val)
 accuracy = pipe.score(X_val, y_val)
 recall = recall_score(y_val, predicted)
-run.log({"val_accuracy": accuracy, "val_recall": recall})
+run.log({"val_accuracy": accuracy, "val_recall": recall,
+         "rows_train": len(X_train)})
 run.summary["rows_train"] = len(X_train)
 
 preview = X_val.assign(actual=y_val, predicted=predicted)  # new: validation rows
