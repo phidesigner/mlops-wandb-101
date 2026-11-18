@@ -4,7 +4,7 @@ channels:
 dependencies:
   - python=3.12
   - pandas
-  - scikit-learn   # the same Pipeline as Sessions 9-11
+  - scikit-learn   
   - joblib         # save the fitted pipeline
   - pyyaml         # read config.yaml in 03_tracking_switch
   - wandb          # Weights & Biases: runs, metrics, artifacts
