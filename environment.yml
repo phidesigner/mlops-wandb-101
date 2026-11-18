@@ -1,0 +1,10 @@
+name: tracking-101
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pandas
+  - scikit-learn   # the same Pipeline as Sessions 9-11
+  - joblib         # save the fitted pipeline
+  - pyyaml         # read config.yaml in 03_tracking_switch
+  - wandb          # Weights & Biases: runs, metrics, artifacts

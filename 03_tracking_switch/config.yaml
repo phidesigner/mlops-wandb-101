@@ -1,0 +1,14 @@
+# All settings in one place. Secrets never go here: the W&B key stays in wandb login
+model:
+  C: 1.0
+
+quality_gate:
+  metric: "val_recall"
+  min_value: 0.60
+
+wandb:
+  enabled: true        # false = the pipeline runs with no W&B at all
+  project: "churn-tracking-101"
+  name: "pipeline-run"
+  job_type: "training-pipeline"
+  tags: ["101", "logreg"]
