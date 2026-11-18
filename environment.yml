@@ -8,3 +8,4 @@ dependencies:
   - joblib         # save the fitted pipeline
   - pyyaml         # read config.yaml in 03_tracking_switch
   - wandb          # Weights & Biases: runs, metrics, artifacts
+  - wandb-workspace  # Weights & Biases: workspace management

@@ -1,6 +1,6 @@
 # All settings in one place. Secrets never go here: the W&B key stays in wandb login
 model:
-  C: 1.0
+  C: 1.0 #0.001 or 1
 
 quality_gate:
   metric: "val_recall"
